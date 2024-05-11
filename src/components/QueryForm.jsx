@@ -30,7 +30,7 @@ function QueryForm() {
       );
       console.log(response.data);
       alert("Query Submitted Successfully!");
-      setFormData({ name: "", email: "", message: "" }); // Reset form
+      setFormData({ name: "", email: "", message: "" });
     } catch (err) {
       console.error(err.response ? err.response.data : err);
       alert("Failed to Submit Query");
