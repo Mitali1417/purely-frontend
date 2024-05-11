@@ -60,7 +60,7 @@ function QueryForm() {
               </span>
             </p>
           </div>
-
+          {/* user form */}
           <form
             onSubmit={onSubmit}
             className={`w-full lg:w-[50%] block z-10 ${styles.flexCenter} flex-col ${styles.text3} font-Quicks font-medium bg-white/50 backdrop-blur-xl px-[1rem] sm:px-[2rem]  xl:px-[4rem] h-full ml-[1rem] rounded-2xl py-[2rem] my-[2rem] `}
