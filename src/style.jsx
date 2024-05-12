@@ -1,5 +1,6 @@
 export const styles = {
   boxWidth: "border-box w-[100%] max-w-[1420px] mx-auto",
+  bg: "bg-[#a97bc5]",
 
   innerWidth: "2xl:max-w-[1280px] w-full",
   interWidth: "lg:w-[80%] w-[100%]",
