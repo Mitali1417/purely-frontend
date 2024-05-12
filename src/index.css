@@ -4,47 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.boxWidth {
-  max-width: 1420px;
-  width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  background-color: #a97bc5;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-/* Selection design */
-::selection {
-  color: #fff;
-  background-color: #f8b195;
-}
-
-::moz-selection {
-  color: #fff;
-  background-color: #f8b195;
-}
-
-::-webkit-scrollbar {
-  width: 1rem;
-}
-::-webkit-scrollbar-track {
-  background: #fff;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #bb96d2;
-  border-radius: 20px;
-  border: 2px solid #fff;
-}
-
-/* Loader */
 .loader {
   width: 40px;
   aspect-ratio: 1;
@@ -78,7 +37,6 @@ body {
   }
 }
 
-/* Container transition - Brands & Guide */
 .category-container {
   overflow: hidden;
   position: relative;
@@ -89,42 +47,72 @@ body {
   opacity: 0;
   transform: translateY(100%);
   transition: visibility 0s linear 0.5s, opacity 0.5s ease-in-out,
-    transform 0.5s ease-in-out;
+    transform 0.5s ease-in-out; /* Apply transitions */
 }
 
 .category-container:hover .category-span {
   visibility: visible;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* Move to cover image */
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out,
-    visibility 0s linear 0s;
+    visibility 0s linear 0s; /* Ensure transitions apply when hover is removed */
 }
 
-/* Mobile nav transition */
+::selection {
+  color: #fff;
+  background-color: #f8b195;
+}
+
+/* for firefox */
+::moz-selection {
+  color: #fff;
+  background-color: #f8b195;
+}
+
+/* ::-webkit-scrollbar {
+  width: 0rem;
+  background-color: transparent;
+} */
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bb96d2;
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+
 .menu-transition {
   transition: opacity 0.5s ease-in-out;
 }
 
-/* Transitions */
+
+
+
 .fade-in {
-  opacity: 0.7;
+  opacity: 0.7; /* Less than fully opaque */
   transform: translateX(0%);
   transition: opacity 0.5s ease-in, transform 0.7s ease-in-out;
 }
 
 .fade-out {
-  opacity: 0.4;
+  opacity: 0.4; /* More translucent during fade out */
   transform: translateX(-100%);
   transition: opacity 0.5s ease-out, transform 0.7s ease-in-out;
 }
 
+/* Keyframes for fadeInRight and fadeOutLeft with adjusted opacities */
 @keyframes fadeInRight {
   0% {
     opacity: 0.4;
     transform: translateX(50%);
   }
   100% {
-    opacity: 0.7;
+    opacity: 0.7; /* Ends less opaque than normal */
     transform: translateX(0);
   }
 }
@@ -135,14 +123,14 @@ body {
     transform: translateX(0);
   }
   100% {
-    opacity: 0.4;
+    opacity: 0.4; /* More translucent as it exits */
     transform: translateX(-50%);
   }
 }
 
 .fadeInUp {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); 
   transition: opacity 0.5s ease-in, transform 0.7s ease-in-out;
 }
 
@@ -152,7 +140,10 @@ body {
   transition: opacity 0.5s ease-out, transform 0.7s ease-in-out;
 }
 
-/* Button Transitions */
+
+
+
+
 .hero-btn:hover {
   background: black;
   transition: background 0.5s ease-in-out;
@@ -169,8 +160,9 @@ body {
   background: linear-gradient(to top right, #421fb4, #f92057);
   transition: background 0.5s ease-in-out;
 }
-.hero-slider-shadow {
+.hero-slider-shadow{
   box-shadow: -25px 25px 50px -12px rgba(0, 0, 0, 0.5);
+
 }
 
 .hero-btn-glow1 {
@@ -189,6 +181,10 @@ body {
   box-shadow: 0px -25px 50px -12px rgba(0, 0, 0, 0.3);
 }
 
+/* .brand-list {
+  width: calc(100vw - 22rem);
+} */
+
 @media (min-width: 240px) {
   body {
     font-size: 90%;
@@ -199,3 +195,12 @@ body {
     font-size: 100%;
   }
 }
+
+/*  xs: "240px",
+     ss: "325px",
+     sm: "600px",
+     md: "768px",
+     lg: "1024px",
+     xl: "1280px",
+     xxl: "1440px",
+ */
