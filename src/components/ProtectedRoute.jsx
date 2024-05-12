@@ -7,9 +7,7 @@ const ProtectedRoute = ({ children }) => {
 
   if (isLoading) {
     return (
-      <div
-        className={` bg-[#DDCBE9] ${styles.flexCenter}  w-full min-h-[100vh] `}
-      >
+      <div className={`${styles.flexCenter}  w-full min-h-[100vh] `}>
         <div className="loader" />
       </div>
     );
@@ -17,9 +15,7 @@ const ProtectedRoute = ({ children }) => {
   if (!isAuthenticated && !isLoading) {
     loginWithRedirect({ appState: { returnTo: window.location.pathname } });
     return (
-      <div
-        className={` bg-[#DDCBE9] ${styles.flexCenter}  w-full min-h-[100vh] `}
-      >
+      <div className={`${styles.flexCenter}  w-full min-h-[100vh] `}>
         <div className="loader" />
       </div>
     );

@@ -12,24 +12,24 @@ const Hero = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTransitionIn(false); // Start fade-out for images
+      setTransitionIn(false);
       setTimeout(() => {
-        setCurrentIndex(nextIndex); // Update to the next image
-        setNextIndex((nextIndex + 1) % heroSlider.length); // Calculate the following image
-        setCurrentTextIndex(nextTextIndex); // Update to the next text
-        setNextTextIndex((nextTextIndex + 1) % heroTextSlider.length); // Calculate the following text
-        setTransitionIn(true); // Reset to start fade-in
-      }, 700); // Duration of the fade-out effect
-    }, 4000); // Interval includes both fade-in and fade-out durations
+        setCurrentIndex(nextIndex);
+        setNextIndex((nextIndex + 1) % heroSlider.length);
+        setCurrentTextIndex(nextTextIndex);
+        setNextTextIndex((nextTextIndex + 1) % heroTextSlider.length);
+        setTransitionIn(true);
+      }, 700);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, [nextIndex, nextTextIndex]);
 
   return (
     <>
-      <div className={`${styles.flexCenter} relative w-full h-full p-[1rem]`}>
+      <div className={`${styles.flexCenter} p-[1rem]  w-full h-full`}>
         <div
-          className={`${styles.flexBetween} flex-row z-10 bg-white/40 backdrop-blur-2xl w-full h-[96vh] rounded-2xl ${styles.xPaddings} overflow-hidden`}
+          className={`${styles.flexBetween} relative flex-row z-10 bg-white/40 backdrop-blur-2xl w-full h-[96vh] rounded-2xl ${styles.xPaddings} overflow-hidden`}
         >
           <div className={`${styles.flexStart} block z-10 flex-col w-full`}>
             <h1
@@ -38,7 +38,6 @@ const Hero = () => {
               pure
               <span className={` ${styles.heroHeading} text-white`}>ly.</span>
             </h1>
-            {/* Dynamic text slider with transition */}
             <div
               className={`${styles.flexStart} block z-20 text-left rounded-r-full rounded-l-lg bg-[#AA7CC7]/20  border-[2px] w-full xl:w-[70%] pt-[1rem] ss:pt-0 pb-[1rem] px-[1rem] overflow-hidden `}
             >

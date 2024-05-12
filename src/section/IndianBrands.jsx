@@ -6,7 +6,8 @@ import Marquee from "react-fast-marquee";
 const IndianBrands = () => {
   return (
     <div className={` px-[1rem] py-[5rem]`}>
-      <div data-aos="fade-in"
+      <div
+        data-aos="fade-in"
         className={`${styles.flexCenter} relative overflow-hidden shadow-2xl py-[2rem] sm:py-[4rem] pb-0 sm:pb-[2rem] flex-col w-full h-full bg-black rounded-3xl`}
       >
         <div className={` ${styles.xPaddings} ${styles.flexCenter} w-full`}>
@@ -51,12 +52,21 @@ const IndianBrands = () => {
             ))}
           </Marquee>
         </div>
-        <div className={`w-[30rem] h-[2rem] absolute bg-warmPink blur-[36px] top-5 right-[7rem] rounded-full rotate-[18deg]`} />
-        <div className={`w-[15rem] h-[2.5rem] absolute bg-yellow  blur-[37px] top-3 right-[8rem] rounded-full rotate-[22deg]`} />
-        <div className={`w-[12rem] h-[2.5rem] absolute bg-coolPurple blur-[37px] top-16  right-[2rem] rounded-full rotate-[9deg]`} />
-        <div className={`w-[22rem] h-[5rem] absolute bg-blue blur-[42px] -left-[1rem] bottom-[5rem] rounded-full -rotate-[18deg]`} />
-        <div className={`w-[27rem] h-[5rem] absolute bg-coolPink/80  blur-[39px] left-5 bottom-[4rem] rounded-full -rotate-[38deg]`} />
-     
+        <div
+          className={`w-[30rem] h-[2rem] absolute bg-warmPink blur-[36px] top-5 right-[7rem] rounded-full rotate-[18deg]`}
+        />
+        <div
+          className={`w-[15rem] h-[2.5rem] absolute bg-yellow  blur-[37px] top-3 right-[8rem] rounded-full rotate-[22deg]`}
+        />
+        <div
+          className={`w-[12rem] h-[2.5rem] absolute bg-coolPurple blur-[37px] top-16  right-[2rem] rounded-full rotate-[9deg]`}
+        />
+        <div
+          className={`w-[22rem] h-[5rem] absolute bg-blue blur-[42px] -left-[1rem] bottom-[5rem] rounded-full -rotate-[18deg]`}
+        />
+        <div
+          className={`w-[27rem] h-[5rem] absolute bg-coolPink/80  blur-[39px] left-5 bottom-[4rem] rounded-full -rotate-[38deg]`}
+        />
       </div>
     </div>
   );

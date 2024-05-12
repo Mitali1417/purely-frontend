@@ -11,10 +11,14 @@ const MustHave = () => {
       <div
         className={` block z-10 relative bg-[#ccb0dd] text-white w-full sm:w-[95%] xl:w-[90%] h-full rounded-3xl ${styles.xInnerPaddings} ${styles.yPaddings}`}
       >
-        <h2 className={` ${styles.head1} mt-[12rem] md:mt-[10rem] lg:mt-0 xl:w-[50%] font-Quicks font-semibold  px-[1rem] sm:px-[2rem]`}>
+        <h2
+          className={` ${styles.head1} mt-[12rem] md:mt-[10rem] lg:mt-0 xl:w-[50%] font-Quicks font-semibold  px-[1rem] sm:px-[2rem]`}
+        >
           Must Haves
         </h2>
-        <p className={` lg:w-[40%] xl:w-[50%] ${styles.text2} font-Quicks font-medium  px-[1rem] sm:px-[2rem]`}>
+        <p
+          className={` lg:w-[40%] xl:w-[50%] ${styles.text2} font-Quicks font-medium  px-[1rem] sm:px-[2rem]`}
+        >
           Whether you're a skincare novice or a seasoned enthusiast, our
           <span className={`italic`}>
             &nbsp;Must-Have Skincare Essentials&nbsp;
@@ -22,7 +26,8 @@ const MustHave = () => {
           section is curated just for you.
         </p>
 
-        <img data-aos="fade-left"
+        <img
+          data-aos="fade-left"
           src={musthave}
           className={`absolute -right-4 -top-[2rem] w-[20rem] lg:w-[28rem] xl:w-[34rem] h-[14rem] lg:h-[20rem] xl:h-[25rem] object-fill rounded-3xl shadow-2xl shadow-primary `}
           alt=""
@@ -32,7 +37,8 @@ const MustHave = () => {
           className={`${styles.flexCenter} block z-20 flex-wrap mt-[2rem] lg:mt-[5rem] xl:mt-[10rem] w-full `}
         >
           {brandList.map((item) => (
-            <div data-aos="fade-up"
+            <div
+              data-aos="fade-up"
               key={item.id}
               className={`category-container relative w-full ss:w-[80%] sm:w-[46%] md:w-[13rem] xl:w-[18rem] sm:h-[22rem] md:h-[18rem] xl:h-[25rem] my-[0.5rem] md:my-[1rem] mx-[0.5rem] bg-gradient-to-tr from-[#d5bee3] to-[#bb96d2] backdrop-blur-xl  p-[0.5rem] rounded-2xl`}
             >

@@ -7,11 +7,12 @@ const About = () => {
       <div
         className={`bg-[#AA7CC7] ${styles.flexCenter} ${styles.xPaddings} flex-col w-full min-h-[96vh] rounded-2xl py-[4rem] `}
       >
-        <div data-aos="fade-up"  className={`md:mt-[8rem] my-[2rem] w-full`}>
+        {/* ------------------------------------Section 1------------------------------------------ */}
+        <div data-aos="fade-up" className={`md:mt-[8rem] my-[2rem] w-full`}>
           <h1
             className={`${styles.aboutHeading} z-20 font-Kalnia text-white w-full`}
           >
-            Why Talk About {" "}
+            Why Talk About{" "}
             <span className={`text-primary w-full `}>Skincare</span>?
           </h1>
           <p className={` ${styles.text1} font-Quicks text-white mt-[1rem]`}>
@@ -22,12 +23,12 @@ const About = () => {
           </p>
         </div>
 
+        {/* ------------------------------------Section 2------------------------------------------ */}
         <div data-aos="fade-up" className={`my-[2rem]`}>
           <h1
             className={` ${styles.aboutHeading} z-20 font-Kalnia text-white w-full `}
           >
-            Is Skincare Just {" "}
-            <span className={`text-primary`}>Hype</span>?
+            Is Skincare Just <span className={`text-primary`}>Hype</span>?
           </h1>
           <p className={` ${styles.text1} font-Quicks text-white mt-[1rem] `}>
             You might wonder if all those fancy bottles and tubes are just a way
@@ -66,6 +67,7 @@ const About = () => {
           </ul>
         </div>
 
+        {/* ------------------------------------Section 3------------------------------------------ */}
         <div data-aos="fade-up" className={`my-[2rem]`}>
           <div className={`${styles.flexBetween}`}>
             <h1
@@ -73,7 +75,6 @@ const About = () => {
             >
               Dive into the Science of Skincare
             </h1>
-           
           </div>
           <p className={` ${styles.text1} font-Quicks text-white mt-[1rem]`}>
             Let's peel back the layers and see why skincare is not just about
@@ -120,6 +121,7 @@ const About = () => {
           </ul>
         </div>
 
+        {/* ------------------------------------Section 4------------------------------------------ */}
         <div data-aos="fade-up" className={`my-[2rem]`}>
           <div className={`${styles.flexBetween}`}>
             <h1
@@ -167,6 +169,7 @@ const About = () => {
           </ul>
         </div>
 
+        {/* ------------------------------------Section 5------------------------------------------ */}
         <div data-aos="fade-up" className={`my-[2rem]`}>
           <div className={`${styles.flexBetween}`}>
             <h1
@@ -183,14 +186,14 @@ const About = () => {
             journey.
             <br />
             <span className={`font-semibold italic `}>
-            Step into the world of empowered skincare
+              Step into the world of empowered skincare
             </span>
-             with Purely—where
-            beauty meets science, and where your skin gets the royal treatment
-            it deserves.
+            with Purely—where beauty meets science, and where your skin gets the
+            royal treatment it deserves.
           </p>
         </div>
 
+        {/* ------------------------------------Section 6------------------------------------------ */}
         <div data-aos="fade-up" className={`my-[2rem]`}>
           <div className={`${styles.flexBetween} flex-col md:flex-row`}>
             <h1
@@ -199,7 +202,7 @@ const About = () => {
               Getting Started
             </h1>
             <div
-              onMouseEnter={() => setHover(true)} 
+              onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
               className={`${styles.flexCenter} block z-10 mt-[2.5rem] lg:mt-0 text-[0.8rem] ss:text-[1rem] font-semibold hero-btn1 hero-btn-glow1 text-white py-[1rem] px-[2rem] rounded-full md:w-[40%] lg:w-fit  `}
             >

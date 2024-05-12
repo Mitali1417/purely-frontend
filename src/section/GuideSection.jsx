@@ -7,9 +7,10 @@ const GuideSection = () => {
   return (
     <div className={`${styles.flexCenter} flex-col w-full h-full p-[1rem] `}>
       <div
-        className={`${styles.flexCenter} relative flex-col w-full h-full ${styles.yPaddings} lg:min-h-[96vh]`}
+        className={`${styles.flexCenter} relative flex-col w-full h-full ${styles.yPaddings} lg:min-h-[96vh] xl:min-h-[60vh]`}
       >
-        <div  data-aos="fade-up"
+        <div
+          data-aos="fade-up"
           className={`bg-black shadow-2xl block z-10 relative ${styles.flexBetween} ${styles.xInnerPaddings} ${styles.yPaddings} flex-col lg:flex-row w-full rounded-2xl`}
         >
           <div

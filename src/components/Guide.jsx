@@ -10,8 +10,9 @@ const Guide = () => {
       className={`${styles.flexCenter} ${styles.xPaddings} flex-col w-full h-full p-[1rem] `}
     >
       <div className={`${styles.flexCenter} flex-col w-full min-h-[96vh] `}>
+        {/* ------------------------------------Section 1------------------------------------------ */}
         <div
-          className={`${styles.flexCenter} flex-col mt-[3rem] ss:mt-[8rem] bg-gradient-to-tr from-[#CCB0DD] to-[#BC97D3] shadow-2xl rounded-3xl p-[2rem] px-[1.3rem] ss:px-[2rem] sm:px-[2.5rem] md:px-[5rem] min-h-[70vh] w-full`}
+          className={`${styles.flexCenter} flex-col mt-[4.5rem] ss:mt-[8rem] bg-gradient-to-tr from-[#CCB0DD] to-[#BC97D3] shadow-2xl rounded-3xl p-[2rem] px-[1.3rem] ss:px-[2rem] sm:px-[2.5rem] md:px-[5rem] min-h-[70vh] w-full`}
         >
           <h2
             className={` ${styles.guideHeading} mb-[1rem] z-20 font-Kalnia text-white w-full`}
@@ -30,6 +31,7 @@ const Guide = () => {
           </p>
         </div>
 
+        {/* ------------------------------------Section 2------------------------------------------ */}
         <div className={`mt-[8rem] my-[2rem]`}>
           <h1
             className={` ${styles.head1} z-20 font-Kalnia text-white mx-[2rem]`}
@@ -141,7 +143,9 @@ const Guide = () => {
             </Marquee>
           </div>
         </div>
-        <div data-aos="fade-up"
+        {/* ------------------------------------Section 2------------------------------------------ */}
+        <div
+          data-aos="fade-up"
           className={`bg-black shadow-2xl  block z-10 relative overflow-hidden ${styles.flexBetween} px-[2rem] ${styles.yPaddings}  flex-col lg:flex-row w-full rounded-2xl `}
         >
           <p className={` ${styles.text2} font-Quicks text-white `}>
@@ -159,7 +163,6 @@ const Guide = () => {
               in on it now and then!
             </span>
           </p>
-
           <div
             className={`w-[22rem] h-[8rem] absolute bg-white/50  blur-3xl  right-[5rem] -top-[5rem] rounded-full -rotate-[38deg]`}
           />
@@ -168,7 +171,7 @@ const Guide = () => {
           />
         </div>
 
-        {/* ---------------------------------Skincare ABC's--------------------------------------- */}
+        {/* ---------------------------------Section 3: Skincare ABC's--------------------------------------- */}
         <div className={`mt-[8rem] my-[2rem] w-[90%]`}>
           <h2 className={` ${styles.head1} z-20 font-Kalnia text-white`}>
             Skincare
@@ -211,7 +214,8 @@ const Guide = () => {
             className={` ${styles.flexCenter} flex-wrap text-white w-full mb-[5rem]`}
           >
             {getCleanser.map((item) => (
-              <div  data-aos="fade-up"
+              <div
+                data-aos="fade-up"
                 key={item.id}
                 className={`category-container relative w-[20rem] h-[25rem] m-[0.5rem] bg-gradient-to-tr from-[#d5bee3] to-[#bb96d2]  p-[0.5rem] rounded-2xl`}
               >
@@ -274,11 +278,12 @@ const Guide = () => {
               </p>
             </div>
           </div>
-          <div 
+          <div
             className={` ${styles.flexCenter} flex-wrap text-white w-full mb-[5rem]`}
           >
             {getMoisturizer.map((item) => (
-              <div data-aos="fade-up"
+              <div
+                data-aos="fade-up"
                 key={item.id}
                 className={`category-container relative w-[20rem] h-[25rem] m-[0.5rem] bg-gradient-to-tr from-[#d5bee3] to-[#bb96d2]  p-[0.5rem] rounded-2xl`}
               >
@@ -340,8 +345,8 @@ const Guide = () => {
             </div>
           </div>
         </div>
-        {/* --------------------------------React and response------------------------------------------- */}
 
+        {/* --------------------------------Section 4: React and response------------------------------------------- */}
         <div className={` my-[2rem]`}>
           <h2 className={` ${styles.head1} z-20 font-Kalnia text-white`}>
             Quick Heads Up: Listen to

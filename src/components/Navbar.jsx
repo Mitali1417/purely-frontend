@@ -55,8 +55,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={`${styles.flexCenter} fixed z-40 top-[1rem] ss:top-[1.5rem] md:top-[2rem] w-full`}
-    > 
+      className={`${styles.flexCenter} ${styles.boxWidth} fixed z-40 top-[1rem] ss:top-[1.5rem] md:top-[2rem] w-full`}
+    >
       <nav
         style={{
           backgroundColor: scrolled ? "white" : "transparent",
@@ -64,9 +64,7 @@ const Navbar = () => {
           transition:
             "background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out",
         }}
-        className={`${styles.flexBetween} ${
-          scrolled ? "bg-yellow" : "bg-primary"
-        } w-[90%] sm:w-[90%] xl:w-[80%] px-[0.5rem] ss:px-[1rem] py-[0.3rem]  ss:py-[0.75rem] rounded-full`}
+        className={`${styles.flexBetween} w-[90%] sm:w-[90%] xl:w-[80%] px-[0.5rem] ss:px-[1rem] py-[0.3rem]  ss:py-[0.75rem] rounded-full`}
       >
         <a
           href="/about"
@@ -108,24 +106,24 @@ const Navbar = () => {
           ))}
         </div>
         <div className={`${styles.flexCenter} flex-row`}>
-        <LoginButton />
-        {/* Mobile View */}
-        <div className={`flex md:hidden sm:ml-[1rem]`}>
-          <img
-            src={
-              toggle
-                ? scrolled
-                  ? closeScrolled
-                  : close
-                : scrolled
-                ? menuScrolled
-                : menu
-            }
-            className="w-[1.7rem] cursor-pointer  z-20"
-            alt={toggle ? "Close menu" : "Open menu"}
-            onClick={toggleMenu}
-          />
-        </div>
+          <LoginButton />
+          {/* Mobile View */}
+          <div className={`flex md:hidden sm:ml-[1rem]`}>
+            <img
+              src={
+                toggle
+                  ? scrolled
+                    ? closeScrolled
+                    : close
+                  : scrolled
+                  ? menuScrolled
+                  : menu
+              }
+              className="w-[1.7rem] cursor-pointer  z-20"
+              alt={toggle ? "Close menu" : "Open menu"}
+              onClick={toggleMenu}
+            />
+          </div>
         </div>
       </nav>
       {/* Mobile View toggle */}

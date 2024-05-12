@@ -13,6 +13,7 @@ const Brands = () => {
       <div
         className={` ${styles.flexCenter}  flex-wrap bg-[#ddcbe9] absolute left-0 sm:left-[15rem] lg:left-[22rem] overflow-y-scroll right-0 top-0 z-0 brand-list h-[100vh]`}
       >
+        {/* ------------------------------------Section 1: Indian Brands------------------------------------------ */}
         <div className={` ${styles.xInnerPaddings}`}>
           <a
             href="/"
@@ -21,7 +22,7 @@ const Brands = () => {
             <img src={arrow} className={`w-[1.5rem] h-[1.5rem]`} alt="arrow" />{" "}
             Home
           </a>
-          <div 
+          <div
             className={`bg-black shadow-2xl block z-10 relative ${styles.flexBetween}  px-[1rem] ss:px-[2rem] flex-col lg:flex-row w-full rounded-2xl py-[1.5rem] ss:py-[4rem] mt-[3.5rem] ss:mt-[5rem]`}
           >
             <div className={` ${styles.text1} font-Quicks text-white `}>
@@ -65,9 +66,13 @@ const Brands = () => {
             ))}
           </Marquee>
         </div>
-        <div className={` ${styles.xInnerPaddings} ${styles.flexCenter} flex-wrap w-full`}>
+
+        {/* ------------------------------------Section 2: Brand List------------------------------------------ */}
+        <div
+          className={` ${styles.xInnerPaddings} ${styles.flexCenter} flex-wrap w-full`}
+        >
           {brandList.map((item) => (
-            <div 
+            <div
               key={item.id}
               className={`category-container  relative w-full ss:w-[80%] sm:w-[55%] md:w-[40%] xl:w-[16rem] h-[17rem] md:h-[20rem] xl:h-[25rem] my-[1rem] md:m-[1rem] bg-gradient-to-tr from-[#d5bee3] to-[#bb96d2] p-[0.5rem] rounded-2xl`}
             >
