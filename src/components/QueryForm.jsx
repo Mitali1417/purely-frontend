@@ -9,11 +9,13 @@ function QueryForm() {
     message: "",
   });
 
+  // Set axios defaults only once outside of the component or function scope
+  axios.defaults.withCredentials = true;
+
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  axios.defaults.withCredentials = true;
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -60,11 +62,7 @@ function QueryForm() {
               </span>
             </p>
           </div>
-          {/* user form */}
-          <form
-            onSubmit={onSubmit}
-            className={`w-full lg:w-[50%] block z-10 ${styles.flexCenter} flex-col ${styles.text3} font-Quicks font-medium bg-white/50 backdrop-blur-xl px-[1rem] sm:px-[2rem]  xl:px-[4rem] h-full ml-[1rem] rounded-2xl py-[2rem] my-[2rem] `}
-          >
+          <form onSubmit={onSubmit} className={`w-full lg:w-[50%] block z-10 ${styles.flexCenter} flex-col ${styles.text3} font-Quicks font-medium bg-white/50 backdrop-blur-xl px-[1rem] sm:px-[2rem]  xl:px-[4rem] h-full ml-[1rem] rounded-2xl py-[2rem] my-[2rem] `}>
             <div className={`${styles.flexBetween} w-full my-[0.5rem]`}>
               <input
                 className={`w-full rounded-lg  outline-[#BF9CD5] py-[0.5rem] px-[1rem] `}
