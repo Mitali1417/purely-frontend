@@ -6,7 +6,7 @@ import AllRoutes from "./AllRoutes";
 
 const App = () => {
   return (
-    <div className={`${styles.boxWidth} ${styles.bg}`}>
+    <div className={`${styles.boxWidth}`}>
       <Router basename={process.env.PUBLIC_URL}>
         <AllRoutes/>
       </Router>
