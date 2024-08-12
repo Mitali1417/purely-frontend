@@ -1,15 +1,20 @@
 import React from "react";
-import { styles } from "./style";
-import { BrowserRouter as Router } from 'react-router-dom';
-import AllRoutes from "./AllRoutes";
-
+import { BrowserRouter as Router } from "react-router-dom";
+import AllRoutes from "./routes/AllRoutes";
+import { styles } from "./style/tailwindStyles";
+import { AuthProvider } from "./context/authContext";
+import { ShopProvider } from "./context/productContext"; 
 
 const App = () => {
   return (
     <div className={`${styles.boxWidth}`}>
-      <Router basename={process.env.PUBLIC_URL}>
-        <AllRoutes/>
-      </Router>
+      <AuthProvider>
+        <ShopProvider>
+          <Router>
+            <AllRoutes />
+          </Router>
+        </ShopProvider>
+      </AuthProvider>
     </div>
   );
 };

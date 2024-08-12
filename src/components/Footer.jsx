@@ -1,17 +1,26 @@
 import React from "react";
-import { styles } from "../style";
+import { Box, Typography, Link } from "@mui/material";
+import { styles } from "../style/tailwindStyles";
 import { navLinks } from "../data";
 import logo from "../assets/Hero/1.png";
 
 const Footer = () => {
   return (
-    <footer className={`${styles.flexCenter} overflow-hidden w-full px-[0.5rem] sm:px-[2rem]`}>
-      <div
-        className={`${styles.flexBetween} flex-col overflow-hidden text-gray-500 w-full px-[1rem] py-[0.75rem] rounded-t-lg  bg-black/80 footer-shadow`}
+    <Box
+      component="footer"
+      style={{
+        marginTop: "2.5rem",
+      }}
+      className={`${styles.flexCenter} overflow-hidden w-full px-[0.5rem] sm:px-[2rem]`}
+    >
+      <Box
+        className={`${styles.flexBetween} flex-col overflow-hidden text-gray-500 w-full px-[1rem] py-[0.75rem] rounded-t-lg bg-black/80 footer-shadow`}
       >
-        <a
+        <Link
           href="/about"
           className={`${styles.flexCenter} font-semibold my-[0.5rem]`}
+          underline="none"
+          color="inherit"
         >
           <img
             src={logo}
@@ -19,26 +28,27 @@ const Footer = () => {
             alt="Logo"
           />
           Purely
-        </a>
+        </Link>
 
-        <div
-          className={`${styles.flexCenter} my-[0.5rem]`}
-        >
+        <Box className={`flex justify-evenly my-[0.5rem] w-[50%]`}>
           {navLinks.map((item) => (
-            <a
-              className={`${styles.navtext} sm:mx-[1rem] hidden sm:flex`}
+            <Link
+              variant="body4"
               key={item.id}
               href={item.navLink}
+              underline="none"
+              color="inherit"
             >
               {item.navText}
-            </a>
+            </Link>
           ))}
-        </div>
-        <div className={`my-[0.5rem] mt-0 ${styles.text3} text-center`}>
-          <p>Copyright © 2024 Apple Inc. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+        </Box>
+
+        <Typography variant="body4" color="textSecondary">
+          Copyright © 2024. All rights reserved.
+        </Typography>
+      </Box>
+    </Box>
   );
 };
 

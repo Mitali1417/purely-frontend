@@ -1,19 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import GuideSection from "../section/GuideSection";
-import MustHave from "../components/MustHave";
-import IndianBrands from "../section/IndianBrands";
+import Hero from "../components/Home/Hero";
 import Footer from "../components/Footer";
+import ProductCatalog from "../components/Product/ProductCatalog";
 
 const HomePage = () => {
   return (
     <>
       <Navbar />
       <Hero />
-      <GuideSection />
-      <MustHave />
-      <IndianBrands />
+      <ProductCatalog />
       <Footer />
     </>
   );
